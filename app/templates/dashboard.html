@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+	{% if 'logged_in' in session %}
+		<center><h2>{{ site_title }} | {{ nickname }} | {{ uid }}</h2></center>
+		<p>
+			{% for q in question %}
+				<ol>
+				<li>{{ q.question }}</li>
+				</ol>
+			{% endfor %}
+		</p>
+		<a href="{{ url_for('logout') }}">Logout</a>
+	{% else %}
+		<center><h2>Please <a href='{{ url_for('login')}}'>Log In</a></h2></center>
+	{% endif %}
+
+{% endblock %}

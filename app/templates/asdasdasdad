@@ -1,0 +1,12 @@
+if form.validate_on_submit():
+			return "Wow"
+			"""user = models.User.query.filter_by(email=request.form['email']).first()
+			if user is not None:# and sha512_crypt.verify(request.form['password'], user.passwordhash):
+				session['logged_in'] = True
+				session['username'] = request.form['username']
+				return redirect(url_for('dashboard'))
+			else:
+				error = 'Invalid username or password.'"""
+	return render_template('login.html',
+							form=form,
+							)

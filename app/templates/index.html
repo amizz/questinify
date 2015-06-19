@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ site_title }} | Questinify</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/pure.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <header>
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="#">Questinify</a>
+            
+            <a class="signup-button right-float" href="{{ url_for('register') }}">Sign Up</a>
+            <a class="right-float pure-button pure-button-primary" href="{{ url_for('login') }}">Log In</a>
+        </div>
+        
+    </header>
+    <section>
+        <div class="search">
+        <form class="pure-form" method="post">
+            <p class="zero-pad-mar"><input type="text" class="pure-input-rounded" placeholder="Type a question!"></p>
+            <p class="ask zero-pad-mar"><button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Ask!</button></p>
+            
+        </form>
+        </div>
+    </section>
+</body>
+</html>

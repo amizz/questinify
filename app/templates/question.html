@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><h2>{{ site_title }}</h2></center>
+
+<form action="" method="post">
+	{% if error %}
+		<p style="color:red;">{{ error }}</p>
+	{% endif %}
+    {{ form.hidden_tag() }}
+    {{ form.question.label }}: {{ form.question }}
+    <br>
+    {{ form.description.label }}: {{ form.description }}
+    <br>
+    <p><input type="submit" value="Ask Question"></p>
+    {{ form.csrf_token }}
+</form>
+{% endblock %}
